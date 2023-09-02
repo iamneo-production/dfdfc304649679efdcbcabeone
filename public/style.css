@@ -21,8 +21,19 @@ body {
 .cell{
   width:100px;
   height:100px;
-  font-size:24px;
+  font-size:25px;
   text-align:center;
   line-height: 100px;
-  
+  cursor: pointer;
+  border: 2px solid #000;
+
+}
+
+.cell:hover{
+  background-color: #f0f0f0;
+}
+
+.message{
+  marigin-top:20px;
+  font-size:24px;
 }

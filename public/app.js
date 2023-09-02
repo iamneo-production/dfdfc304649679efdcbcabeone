@@ -14,7 +14,7 @@ let conditions = [
     [2, 4, 6]
 ];
 
-// Function to handle player moves
+/* Function to handle player moves
 const ticTacToe = (element, index) => {
     // Your game logic here
 
@@ -34,6 +34,8 @@ const ticTacToe = (element, index) => {
 
     // Your code to handle button and cell interactions
     // ...
+    
+    
 };
 
     /*
@@ -62,3 +64,4 @@ btns.forEach((btn, i) => {
 });
 
 document.querySelector('#reset').addEventListener('click', resetGame);
+//...
