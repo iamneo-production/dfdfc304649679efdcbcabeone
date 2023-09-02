@@ -72,7 +72,18 @@ let currentPlayer='X';
 let gameOver=false;
 
 functionmakeMove(row,col){
-    if (!gameOver && cells[row*3+col].textContent ===" ){
-
+    if (!gameOver && cells[row*3+col].textContent ===){
+        cells[row*3+col].textContent=currentPlayer;
+        if(checkWinner(row,col)){
+            message.textContent='${currentPlayer} wins!';
+            gameOver=true;
+        }
+        else if([...cells].every(cell=>cell.textContent!==")){
+            message.textContent="its a draw!";
+            gameOver=true;
+        }
+        else{
+            currentPlayer=currentPlayer==='X'?'O':'X';
+        }
     }
 }
