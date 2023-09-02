@@ -10,3 +10,19 @@ body {
   }
   
 /* Enter your styling here */
+.board{
+  display:grid;
+  grid-template-columns: repeat(3,100px);
+  gap: 5px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.cell{
+  width:100px;
+  height:100px;
+  font-size:24px;
+  text-align:center;
+  line-height: 100px;
+  
+}
