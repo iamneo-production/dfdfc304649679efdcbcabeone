@@ -72,7 +72,7 @@ let currentPlayer='X';
 let gameOver=false;
 
 functionmakeMove(row,col){
-    if (!gameOver && cells[row*3+col].textContent ===){
+    if (!gameOver && cells[row*3+col].textContent ==="){
         cells[row*3+col].textContent=currentPlayer;
         if(checkWinner(row,col)){
             message.textContent='${currentPlayer} wins!';
@@ -86,4 +86,12 @@ functionmakeMove(row,col){
             currentPlayer=currentPlayer==='X'?'O':'X';
         }
     }
+}
+
+function checkWinner(row,col){
+    const currentSymbol=cells[row*3+col].textContent
+    if(cells[row*3].textContent===currentSymbol&&cells[row*3+1].textConent===currentSymbol&&cells[row*3+2].textContent===currentSymbol){
+        return true;
+    }
+    if ((row===col||row+col===2)&&{{cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&}})
 }
