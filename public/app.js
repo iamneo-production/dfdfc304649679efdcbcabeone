@@ -71,14 +71,14 @@ const message = document.getElementById('message');
 let currentPlayer='X';
 let gameOver=false;
 
-functionmakeMove(row,col){
-    if (!gameOver && cells[row*3+col].textContent ==="){
+function makeMove(row,col){
+    if (!gameOver && cells[row*3+col].textContent ==""){
         cells[row*3+col].textContent=currentPlayer;
         if(checkWinner(row,col)){
             message.textContent='${currentPlayer} wins!';
             gameOver=true;
         }
-        else if([...cells].every(cell=>cell.textContent!==")){
+        else if([...cells].every(cell=>cell.textContent!=="")){
             message.textContent="its a draw!";
             gameOver=true;
         }
@@ -93,5 +93,8 @@ function checkWinner(row,col){
     if(cells[row*3].textContent===currentSymbol&&cells[row*3+1].textConent===currentSymbol&&cells[row*3+2].textContent===currentSymbol){
         return true;
     }
-    if ((row===col||row+col===2)&&{{cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&cells[0].textContent===currentSymbol&&}})
+    if ((row===col||row+col===2)&&((cells[0].textContent===currentSymbol&&cells[4].textContent===currentSymbol&&cells[8].textContent===currentSymbol&&cells[2].textContent===currentSymbol&&cells[4].textContent===currentSymbol&&cells[6].textContent===currentSymbol))){
+        return true;
+    }
+    return false;
 }
